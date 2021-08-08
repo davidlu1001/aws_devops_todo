@@ -9,5 +9,8 @@
 **/__pycache__
 **/*.pyc
 
+# Ignore Pipenv files
+**/Pipfile*
+
 # Ignore macOS directory metadata files
 **/.DS_Store
