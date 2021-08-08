@@ -1,8 +1,8 @@
 .PHONY: test release clean version login logout publish
 
 export APP_VERSION ?= $(shell git rev-parse --short HEAD)
-export REGION ?= "ap-southeast-2"
-export ACCOUNT_ID ?= "348807118004"
+export REGION ?= ap-southeast-2
+export ACCOUNT_ID ?= 348807118004
 
 version:
 	@ echo '{"Version": "$(APP_VERSION)"}'
