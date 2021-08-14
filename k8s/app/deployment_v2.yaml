@@ -27,6 +27,11 @@ spec:
       labels:
         app: todobackend
     spec:
+      securityContext:
+        fsGroup: 1000
+      volumes:
+        - name: public
+          emptyDir: {}
       containers:
         - name: todobackend
           image: 348807118004.dkr.ecr.ap-southeast-2.amazonaws.com/aws-learn-devops/todobackend
@@ -37,6 +42,9 @@ spec:
           livenessProbe:
             httpGet:
               port: 8000
+          volumeMounts:
+            - name: public
+              mountPath: /public
           command:
             - uwsgi
             - "--http=0.0.0.0:8000"
