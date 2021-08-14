@@ -3,6 +3,7 @@
 export APP_VERSION ?= $(shell git rev-parse --short HEAD)
 export REGION ?= ap-southeast-2
 export ACCOUNT_ID ?= 348807118004
+export AWS_PROFILE ?= aws-learn-devops
 
 version:
 	@ echo '{"Version": "$(APP_VERSION)"}'
