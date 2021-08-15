@@ -28,6 +28,14 @@ spec:
         - name: data
           persistentVolumeClaim:
             claimName: todobackend-data
+        - name: secrets
+          secret:
+            secretName: todobackend-secret
+            items:
+              - key: MYSQL_PASSWORD
+                path: MYSQL_PASSWORD
+              - key: MYSQL_ROOT_PASSWORD
+                path: MYSQL_ROOT_PASSWORD
       containers:
         - name: db
           image: mysql:5.7
