@@ -8,7 +8,7 @@ metadata:
 spec:
   containers:
     - name: todobackend
-      image: 348807118004.dkr.ecr.ap-southeast-2.amazonaws.com/aws-learn-devops/todobackend
+      image: 500955583076.dkr.ecr.ap-southeast-2.amazonaws.com/aws-learn-devops/todobackend
       imagePullPolicy: IfNotPresent
       command:
         - uwsgi
