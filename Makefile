@@ -2,7 +2,13 @@
 
 export APP_VERSION ?= $(shell git rev-parse --short HEAD)
 export REGION ?= ap-southeast-2
-export ACCOUNT_ID ?= 500955583076
+# Test
+#export ACCOUNT_ID ?= 500955583076
+# Prod
+#export ACCOUNT_ID ?= 542859091916
+
+# Test-CI - mgmt account
+export ACCOUNT_ID ?= 614088866336
 
 version:
 	@ echo '{"Version": "$(APP_VERSION)"}'
